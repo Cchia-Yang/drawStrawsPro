@@ -5,7 +5,7 @@ $(document).ready(function() {
       var num = $(".num").val();
       var resText = $(".resText");
   
-      if (Number(end) <= Number(start) || Number(num) > (Number(end) - Number(start))) {
+      if (Number(end) <= Number(start) || Number(num) > (Number(end) - Number(start)) || isNaN(Number(start)) || isNaN(Number(end)) || isNaN(Number(num))) {
         alert("範圍有誤，請重新輸入。");
         resText.val("抽籤結果");
         $(".start, .end, .num").val("");
