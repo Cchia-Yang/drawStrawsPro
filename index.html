@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>抽籤網頁</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="./images/icon.svg" type="image/x-icon"/>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<nav class="navbar navbar-expand-lg" style="box-shadow:2px 2px 2px 2px #cccccc; position:fixed; right: 0; left: 0; width: 100%; z-index: 1000; background-color: aliceblue;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">抽籤網頁</a>
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+					  <a class="nav-link" href="#first">介紹</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#second">Javascript亂數函式</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#third">範例</a>
+					  </li>
+				  </ul>
+                <a  class="btn btn-outline-success sayHello">Say Hello!</a>
+            </div>
+    	</nav>	
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
+
+				<!-- One -->
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>亂數</h1>
+							<p class="major">所有的電腦演算法均是確定性演算法，因此在電腦上的隨機函式生成的都是偽亂數，</p>
+						</div>
+						<div class="image">
+							<img src="images/1.jpg" alt="" />
+						</div>
+					</section>
+
+				<!-- Two -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>介紹</h2>
+							<br>
+							<olol style="list-style: none;">
+								<li><b>定義</b></li>
+									<li><ul style="list-style: none;">
+										<li>根據密碼學原理，隨機數的隨機性檢驗可以分爲三個標準：</li>
+										<li><ol>
+											<li><b>統計學偽隨機性</b>：統計學偽隨機性指的是在給定的隨機位元流樣本中，1的數量大致等於0的數量，同理，「10」「01」「00」「11」四者數量大致相等。類似的標準被稱為統計學隨機性。滿足這類要求的數字在人類「一眼看上去」是隨機的。</li>
+											<li><b>密碼學安全偽隨機性</b>：其定義為，給定隨機樣本的一部分和隨機演算法，不能有效的演算出隨機樣本的剩餘部分。</li>
+											<li><b>真隨機性</b>：其定義為隨機樣本不可重現。實際上只要給定邊界條件，真隨機數並不存在，可是如果產生一個真隨機數樣本的邊界條件十分複雜且難以捕捉（比如當地的背景輻射波動值），可以認為用這個方法演算出來了真隨機數。但實際上，這也只是非常接近真隨機數的偽隨機數，一般認為，無論是背景輻射、物理噪音、拋硬幣等等都是可被觀察了解的，任何基於經典力學產生的隨機數，都只是偽隨機數。</li>
+										</ol></li>
+									</ul></li>
+								<li><b>分類</b></li>
+									<ul style="list-style: none;">
+										<li><b>偽隨機數</b>：滿足第一個條件的隨機數。</li>
+										<li><b>密碼學安全的偽隨機數</b>：同時滿足前兩個條件的隨機數。可以透過密碼學安全偽亂數生成器計算得出。</li>
+										<li><b>真隨機數</b>：同時滿足三個條件的隨機數。</li>
+									</ul>
+									
+								</li>
+							</ol>
+						</div>
+						<div class="image">
+							<img src="images/2.jpg" alt="" />
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"  id="second">
+						<div class="content">
+							<h2>Javascript亂數函式</h2>
+							<br>
+							<p>函數Math.random()會回傳一個偽隨機小數（pseudo-random）介於0到1之間，大致符合數學與統計上的均勻分佈（uniform distribution），可以選定想要的數字區間，它會透過演算法被產生並且不允許使用者自行跳選或重設成特定數字。</p>
+						</div>
+						<div class="image">
+							<img src="images/3.jpg" alt="" />
+						</div>
+					</section>
+
+				<!-- Four -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="third">
+						<div class="content">
+							<div style="margin: 2%;">
+								<h2>範例</h2>
+								<br>
+								<label>範圍初值</label>
+								<input class="form-control start" placeholder="Eg: 1">
+								<br>
+						
+								<label>範圍末值</label>
+								<input class="form-control end" placeholder="Eg: 100">
+								<br>
+						
+								<label>抽籤數量</label>
+								<input class="form-control num" placeholder="Eg: 5">
+							</div>
+							<div style="display: flex; justify-content: center; margin: 2%;">
+								<button class="btnSend" type="submit"  style="display: flex; justify-content: center; width: 20%;">抽</button>
+							</div>
+							<div style="display: flex; justify-content: center; margin:2%;">
+								<textarea rows="10" cols="50" class="resText" style="text-align: center; resize:none;" readonly>抽籤結果</textarea>
+							</div>
+						</div>
+						<div class="image">
+							<img src="images/4.jpg" alt="" />
+						</div>
+					</section>
+					
+			
+					<br>
+				<!-- Footer -->
+					<footer class="blockquote-footer" style="text-align: center; padding: 26px 0;	">
+						<div>
+							<p><small>&copy; 2023 四資工1A B11117014 楊家嘉<br>資料取自維基百科</small></p>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/script.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+	</body>
+</html>
